@@ -1,0 +1,21 @@
+{
+  "name": "svgjs_logo",
+  "authors": [
+    "dotnetCarpenter <jon.ronnenberg@gmail.com>"
+  ],
+  "description": "The logo for svgdotjs",
+  "main": "logo.htm",
+  "license": "MIT",
+  "homepage": "https://svgdotjs.github.io/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "svg.pathhandles.js": "https://github.com/Fuzzyma/svg.pathhandles.js.git#^0.0.1"
+  }
+}
