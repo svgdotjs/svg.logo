@@ -1,57 +1,70 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-		<title>SVG.js</title>
-		<style>
-			.svgjs-logo {
-				width: 29.6em/*4em*/;
-				margin: 1.24em;
-			}
-			.svgjs-logo, img {
-				position:absolute;
-				left:4em;
-				top: 2em;
-				display: inline-block;
-				opacity: 1;
-			}
-			img {
-				opacity: 0.5;
-			}
-		</style>
-	</head>
-	<body>
-		<form><label>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>SVG.js</title>
+	<style>
+		.svgjs-logo {
+			width: 29.6em/*4em*/
+			;
+			margin: 1.24em;
+		}
+		
+		.svgjs-logo,
+		img {
+			position: absolute;
+			left: 4em;
+			top: 2em;
+			display: inline-block;
+			opacity: 1;
+		}
+		
+		img {
+			opacity: 0.5;
+		}
+	</style>
+</head>
+
+<body>
+	<form><label>
 			<input type="checkbox" checked onchange="javascript: document.querySelector('img').style.display = this.checked ? 'inline-block' : 'none';">
 			Show/Hide logo image</label></form>
-		<header role="banner">
-    	<div class="wrap">
-				<div class="svgjs-logo"></div>
-				<img src="logo.png">
-				<h1 class="site-title"><a class="title-link" href="https://svgdotjs.github.io">SVG.js</a></h1>
-			</div>
-  	</header>
-		<script src="bower_components/svg.js/dist/svg.min.js"></script>
-		<!--<script src="bower_components/svg.pathhandles.js/dist/svg.pathhandles.js"></script>-->
-		<script>
-			var logo = SVG(document.querySelector(".svgjs-logo"))
-				.viewbox(0, 0, 100, 100)
+	<header role="banner">
+		<div class="wrap">
+			<div class="svgjs-logo"></div>
+			<img src="logo.png">
+			<h1 class="site-title"><a class="title-link" href="https://svgdotjs.github.io">SVG.js</a></h1>
+		</div>
 
-			logo
-				.path("M0 50 L 50 0 L 100 50 L 50 100 Z")
-				.attr({
-					fill: "#f06",
-					stroke: "#f06",
-					"stroke-width": 0
-				})
+		<!-- LOGO FROM FUZZYMA -->
+		<svg width="100%" height="100%" viewbox="0 0 326 326" style="" id="logo">
+			<rect width="230" height="230" fill="#ff017c" x="48" y="48" transform="rotate(45 163 163)" />
+			<path d="M165 50C50 165 276 165 165 276" stroke="#fff" stroke-width="13" fill="none" stroke-linecap="round" /> </svg>
 
-			var curve = logo.path("M 50 20 C 20 50, 80 50, 50 80")
-				.attr({
-					fill: "transparent",
-					stroke: "white",
-					"stroke-width": 3.5
-				})
-		</script>
-	</body>
+	</header>
+	<script src="bower_components/svg.js/dist/svg.min.js"></script>
+	<!--<script src="bower_components/svg.pathhandles.js/dist/svg.pathhandles.js"></script>-->
+	<script>
+		var logo = SVG(document.querySelector(".svgjs-logo"))
+			.viewbox(0, 0, 100, 100)
+
+		logo
+			.path("M0 50 L 50 0 L 100 50 L 50 100 Z")
+			.attr({
+				fill: "#f06",
+				stroke: "#f06",
+				"stroke-width": 0
+			})
+
+		var curve = logo.path("M 50 20 C 20 50, 80 50, 50 80")
+			.attr({
+				fill: "transparent",
+				stroke: "white",
+				"stroke-width": 3.5
+			})
+	</script>
+</body>
+
 </html>

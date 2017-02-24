@@ -16,6 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "svg.pathhandles.js": "https://github.com/Fuzzyma/svg.pathhandles.js.git#^0.0.1"
+    "svg.pathhandles.js": "^0.0.1"
   }
 }
